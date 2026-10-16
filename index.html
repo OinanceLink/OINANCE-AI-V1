@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#050607">
+
+  <title>OINANCE AI - Your Everyday AI</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <header class="topbar">
+    <div class="brand">
+
+      <!-- Replace with your official OINANCE logo later -->
+      <div class="logo-placeholder">LOGO</div>
+
+      <div>
+        <h2>OINANCE AI</h2>
+        <p>Your Everyday AI Assistant</p>
+      </div>
+
+    </div>
+
+    <button class="icon-button" aria-label="Notifications">♧</button>
+  </header>
+
+
+  <!-- HOME SCREEN -->
+  <main>
+
+    <section class="screen active" id="home">
+
+      <div class="hero">
+
+        <div class="orb-wrap">
+          <div class="orb"></div>
+        </div>
+
+        <h1>Good to see you, Chris!</h1>
+        <p>What can I help you with today?</p>
+
+      </div>
+
+
+      <div class="grid">
+
+        <button class="tile" data-prompt="Help me solve an everyday problem.">
+          <span class="tile-icon">✧</span>
+          <strong>Ask AI</strong>
+          <small>Get answers and advice</small>
+        </button>
+
+        <button class="tile" data-prompt="Help me write or improve a message.">
+          <span class="tile-icon">✎</span>
+          <strong>Writing Assistant</strong>
+          <small>Create and improve text</small>
+        </button>
+
+        <button class="tile" data-prompt="Help me translate some text.">
+          <span class="tile-icon">文</span>
+          <strong>Translator</strong>
+          <small>Break language barriers</small>
+        </button>
+
+        <button class="tile" data-prompt="Help me create a monthly budget in Nigerian naira.">
+          <span class="tile-icon">₦</span>
+          <strong>Money Manager</strong>
+          <small>Plan your finances</small>
+        </button>
+
+        <button class="tile" data-prompt="Teach me a useful skill step by step.">
+          <span class="tile-icon">◇</span>
+          <strong>Learning Assistant</strong>
+          <small>Learn something new</small>
+        </button>
+
+        <button class="tile" data-prompt="Help me plan my day.">
+          <span class="tile-icon">▦</span>
+          <strong>Daily Planner</strong>
+          <small>Organize your activities</small>
+        </button>
+
+      </div>
+
+      <button class="primary" id="newChat">
+        Start a New Chat <span>✧</span>
+      </button>
+
+    </section>
+
+
+    <!-- CHAT SCREEN -->
+    <section class="screen" id="chat">
+
+      <div class="screen-head">
+        <h2>OINANCE AI Chat</h2>
+        <button class="icon-button" id="clearChat">＋</button>
+      </div>
+
+      <div class="chat-box" id="chatBox">
+
+        <div class="bubble ai">
+          Hello! Welcome to OINANCE AI.
+
+          I can help with writing, learning, planning,
+          translation, money management and everyday questions.
+
+          What would you like help with?
+        </div>
+
+      </div>
+
+      <form class="chat-compose" id="chatForm">
+
+        <input
+          id="messageInput"
+          type="text"
+          placeholder="Ask OINANCE AI anything..."
+          autocomplete="off"
+          required
+        >
+
+        <button class="send" type="submit" aria-label="Send message">
+          ➤
+        </button>
+
+      </form>
+
+      <p class="notice">
+        Preview version. AI responses are simulated until a real AI service is connected.
+      </p>
+
+    </section>
+
+
+    <!-- VOICE SCREEN -->
+    <section class="screen" id="voice">
+
+      <div class="screen-head">
+        <button class="icon-button" data-go="home">‹</button>
+        <h2>Voice Assistant</h2>
+        <span></span>
+      </div>
+
+      <div class="voice-card">
+
+        <div class="listening">〰 I'm listening...</div>
+
+        <div class="voice-orb">
+          <div class="orb"></div>
+        </div>
+
+        <h2>Talk to OINANCE AI</h2>
+
+        <p class="muted">
+          Your personal assistant for everyday life.
+        </p>
+
+        <button class="mic" id="micButton" aria-label="Start voice input">
+          🎙
+        </button>
+
+        <p id="voiceStatus" class="muted">
+          Voice recognition availability depends on your browser.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- TOOLS SCREEN -->
+    <section class="screen" id="tools">
+
+      <div class="screen-head">
+        <h2>AI Tools</h2>
+      </div>
+
+      <div class="tools-list">
+
+        <button class="tool" data-prompt="Help me write something professionally.">
+          <span class="tile-icon">✎</span>
+          <span><strong>Writing Assistant</strong><small>Write and improve text</small></span>
+          <span class="tool-arrow">›</span>
+        </button>
+
+        <button class="tool" data-prompt="Help me translate text between languages.">
+          <span class="tile-icon">文</span>
+          <span><strong>Translator</strong><small>Translate supported languages</small></span>
+          <span class="tool-arrow">›</span>
+        </button>
+
+        <button class="tool" data-prompt="Help me make a budget in naira.">
+          <span class="tile-icon">₦</span>
+          <span><strong>Money Manager</strong><small>Budget and manage spending</small></span>
+          <span class="tool-arrow">›</span>
+        </button>
+
+        <button class="tool" data-prompt="Teach me a new skill.">
+          <span class="tile-icon">◇</span>
+          <span><strong>Learning Assistant</strong><small>Learn step by step</small></span>
+          <span class="tool-arrow">›</span>
+        </button>
+
+        <button class="tool" data-prompt="Help me calculate 25000 plus 17500.">
+          <span class="tile-icon">▦</span>
+          <span><strong>Calculator</strong><small>Perform calculations</small></span>
+          <span class="tool-arrow">›</span>
+        </button>
+
+        <button class="tool" data-prompt="Explain how currency conversion works.">
+          <span class="tile-icon">⇄</span>
+          <span><strong>Currency Converter</strong><small>Understand exchange rates</small></span>
+          <span class="tool-arrow">›</span>
+        </button>
+
+        <button class="tool" data-prompt="Create a daily plan for me.">
+          <span class="tile-icon">▣</span>
+          <span><strong>Daily Planner</strong><small>Organize your day</small></span>
+          <span class="tool-arrow">›</span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROFILE SCREEN -->
+    <section class="screen" id="profile">
+
+      <div class="screen-head">
+        <h2>Your Profile</h2>
+      </div>
+
+      <div class="profile-card">
+
+        <h3>OINANCE AI</h3>
+        <p class="muted">Your everyday AI assistant</p>
+
+        <label for="displayName">Display name</label>
+
+        <input id="displayName" value="Chris">
+
+        <button class="primary" id="saveName">
+          Save Name
+        </button>
+
+      </div>
+
+      <p class="notice">
+        Your official OINANCE logo will be added when the original image is available.
+      </p>
+
+    </section>
+
+  </main>
+
+
+  <!-- BOTTOM NAVIGATION -->
+  <nav class="bottom-nav">
+
+    <button class="nav-btn active" data-screen="home">
+      <span>⌂</span>Home
+    </button>
+
+    <button class="nav-btn" data-screen="tools">
+      <span>▦</span>Tools
+    </button>
+
+    <button class="nav-btn" data-screen="chat">
+      <span>☏</span>Chat
+    </button>
+
+    <button class="nav-btn" data-screen="voice">
+      <span>◉</span>Voice
+    </button>
+
+    <button class="nav-btn" data-screen="profile">
+      <span>○</span>Profile
+    </button>
+
+  </nav>
+
+</div>
+
+<div id="toast" class="toast" role="status"></div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
